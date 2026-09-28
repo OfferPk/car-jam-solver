@@ -1,0 +1,11 @@
+{
+  "appId": "com.offerpk.carjam",
+  "appName": "Car Jam Solver",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false
+  }
+}

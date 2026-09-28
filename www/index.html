@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+  <meta name="version" content="1.0.0-complete" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="Car Jam Solver — offline traffic-jam parking puzzle. Plan vehicle order, board passengers, avoid TRAFFIC JAM." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <title>Car Jam Solver</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="screen-main" class="screen active"></div>
+    <div id="screen-map" class="screen"></div>
+    <div id="screen-play" class="screen"></div>
+    <div id="screen-garage" class="screen"></div>
+    <div id="screen-settings" class="screen"></div>
+  </div>
+  <script src="js/solver.js"></script>
+  <script src="js/levels.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/ads.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+      });
+    }
+  </script>
+</body>
+</html>

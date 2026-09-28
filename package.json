@@ -1,0 +1,27 @@
+{
+  "name": "car-jam-solver",
+  "version": "1.0.0-complete",
+  "description": "Car Jam Solver — offline traffic-jam parking puzzle with auto-solver validated levels, PWA + Capacitor",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve -l 4180 .",
+    "serve": "npx --yes serve -l 4180 .",
+    "build:web": "node scripts/build-web.js",
+    "cap:add:android": "npx cap add android",
+    "cap:sync": "npm run build:web && npx cap sync android",
+    "cap:open": "npx cap open android",
+    "start:py": "python3 -m http.server 4180",
+    "smoke": "node scripts/smoke-engine.js",
+    "test": "node scripts/smoke-engine.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.0"
+  },
+  "keywords": ["puzzle", "parking", "traffic-jam", "pwa", "offline", "capacitor"],
+  "author": "CEO BOT Games / Mia Smith",
+  "license": "MIT"
+}
