@@ -44,6 +44,8 @@ console.log('Built www/');
 
 // docs: full web + README/STATUS
 copyWeb(path.join(root, 'docs'));
+// Preserve GitHub Pages' Jekyll opt-out after copyWeb recreates docs/.
+fs.writeFileSync(path.join(root, 'docs', '.nojekyll'), '');
 for (const f of ['README.md', 'STATUS.md']) {
   const s = path.join(root, f);
   if (fs.existsSync(s)) fs.copyFileSync(s, path.join(root, 'docs', f));
