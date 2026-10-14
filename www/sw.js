@@ -1,5 +1,5 @@
 /* Car Jam Solver service worker */
-const CACHE = 'carjam-v1-20260928-complete';
+const CACHE = 'carjam-v1-20261014-ui-polish';
 const ASSETS = [
   './',
   './index.html',
